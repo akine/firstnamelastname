@@ -4,10 +4,9 @@ import React from "react";
 function UsernameForm({ onSubmitUsername }) {
   function hundleSubmit(event) {
     event.preventDefault();
-    // console.dir(event.target)
     const lastname = event.target.elements.lastnameInput.value;
     const firstname = event.target.elements.firstnameInput.value;
-    onSubmitUsername(lastname,firstname);
+    onSubmitUsername(firstname, lastname);
   }
   return (
     <form onSubmit={hundleSubmit}>
@@ -19,7 +18,7 @@ function UsernameForm({ onSubmitUsername }) {
         <label htmlFor="firstnameInput">名前: </label>
         <input id="firstnameInput" type="text" />
       </div>
-      <button type="submit">ファーストネームラストネーム知りたい</button>
+      <button type="submit">ファーストネームラストネームが知りたい</button>
     </form>
   );
 }
