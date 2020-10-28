@@ -2,6 +2,11 @@ import "./App.css";
 import React from "react";
 
 function Display() {
+  return (
+    <div>
+      <p hidden>ファーストネームラストネーム</p>
+    </div>
+  );
 }
 
 function UsernameForm({ onSubmitUsername }) {
@@ -28,10 +33,13 @@ function UsernameForm({ onSubmitUsername }) {
 
 function App() {
   const onSubmitUsername = (firstname, lastname) =>
-    alert(`お前のラストネームは: ${lastname}\nんでファーストネームは: ${firstname}`);
+    alert(
+      `お前のラストネームは: ${lastname}\nんでファーストネームは: ${firstname}`
+    );
   return (
     <div className="App">
       <header className="App-header">
+        <Display />
         <UsernameForm onSubmitUsername={onSubmitUsername} />
       </header>
     </div>
