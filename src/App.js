@@ -1,6 +1,9 @@
 import "./App.css";
 import React from "react";
 
+function Display() {
+}
+
 function UsernameForm({ onSubmitUsername }) {
   function hundleSubmit(event) {
     event.preventDefault();
