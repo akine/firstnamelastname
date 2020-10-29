@@ -34,7 +34,7 @@ function UsernameForm({ onSubmitUsername }) {
 function App() {
   const onSubmitUsername = (firstname, lastname) =>
     alert(
-      `お前のラストネームは: ${lastname}\nんでファーストネームは: ${firstname}`
+      `お前のファーストネームは: ${firstname}\nんでラストネームは: ${lastname}`
     );
   return (
     <div className="App">
