@@ -22,18 +22,18 @@ function UsernameForm({ onSubmitUsername }) {
   function hundleChange(event) {
     const {value} = event.target
     const isNumber = typeof value === "number"
-    setError(isNumber ? null : '数字じゃん💢')
+    setError(isNumber ? null : '数字じゃん')
   }
 
   return (
     <form onSubmit={hundleSubmit}>
       <div>
         <label htmlFor="lastnameInput">名字: </label>
-        <input id="lastnameInput" type="text" onChange={hundleChange} />
+        <input id="lastnameInput" type="text" />
       </div>
       <div>
         <label htmlFor="firstnameInput">名前: </label>
-        <input id="firstnameInput" type="text" onChange={hundleChange} />
+        <input id="firstnameInput" type="text" />
       </div>
       <div style={{color: 'red'}}>{error}</div>
       <button disabled={Boolean(error)} type="submit">ファーストネームラストネームが知りたい</button>
