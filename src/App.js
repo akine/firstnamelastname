@@ -21,8 +21,9 @@ function UsernameForm({ onSubmitUsername }) {
 
   function hundleChange(event) {
     const {value} = event.target
-    const isNumber = typeof value === "number"
-    setError(isNumber ? null : '数字じゃん')
+    console.dir(value === "number")
+    // const isNumber = typeof value === "number"
+    // setError(isNumber ? null : '数字じゃん')
   }
 
   return (
