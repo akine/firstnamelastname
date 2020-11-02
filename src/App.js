@@ -12,14 +12,14 @@ function Display() {
 function UsernameForm({ onSubmitUsername }) {
   const [error, setError] = React.useState(null)
 
-  function hundleSubmit(event) {
+  function handleSubmit(event) {
     event.preventDefault();
     const lastname = event.target.elements.lastnameInput.value;
     const firstname = event.target.elements.firstnameInput.value;
     onSubmitUsername(firstname, lastname);
   }
 
-  function hundleChange(event) {
+  function handleChange(event) {
     const {value} = event.target
     console.dir(value === "number")
     // const isNumber = typeof value === "number"
@@ -27,7 +27,7 @@ function UsernameForm({ onSubmitUsername }) {
   }
 
   return (
-    <form onSubmit={hundleSubmit}>
+    <form onSubmit={handleSubmit}>
       <div>
         <label htmlFor="lastnameInput">名字: </label>
         <input id="lastnameInput" type="text" />
