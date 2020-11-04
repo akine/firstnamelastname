@@ -10,20 +10,11 @@ function Display() {
 }
 
 function UsernameForm({ onSubmitUsername }) {
-  const [error, setError] = React.useState(null)
-
   function handleSubmit(event) {
     event.preventDefault();
     const lastname = event.target.elements.lastnameInput.value;
     const firstname = event.target.elements.firstnameInput.value;
     onSubmitUsername(firstname, lastname);
-  }
-
-  function handleChange(event) {
-    const {value} = event.target
-    console.dir(value === "number")
-    // const isNumber = typeof value === "number"
-    // setError(isNumber ? null : '数字じゃん')
   }
 
   return (
@@ -36,8 +27,7 @@ function UsernameForm({ onSubmitUsername }) {
         <label htmlFor="firstnameInput">名前: </label>
         <input id="firstnameInput" type="text" />
       </div>
-      <div style={{color: 'red'}}>{error}</div>
-      <button disabled={Boolean(error)} type="submit">ファーストネームラストネームが知りたい</button>
+      <button type="submit">ファーストネームラストネームが知りたい</button>
     </form>
   );
 }
